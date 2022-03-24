@@ -1,0 +1,14 @@
+name: InfiniteMonkey
+main: com.kenandwicky.monkey.InfiniteMonkey
+author: KenKwokandWickyYiu
+description: I am a Monkey
+version: 1.0
+api-version: 1.13
+depend: [SingleCandyCrush]
+
+commands:
+  autogame:
+   usage: /<command>
+   description: Start the Monkey 
+   
+  
