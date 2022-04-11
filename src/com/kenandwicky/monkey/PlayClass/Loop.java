@@ -2,6 +2,7 @@ package com.kenandwicky.monkey.PlayClass;
 
 import java.util.Random;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
 
@@ -24,6 +25,11 @@ public class Loop implements Runnable {
 		int random_direction = rnd.nextInt(3); //Control xDiff (0) or yDiff (2) or zDiff (1)
 		int random_positive = rnd.nextInt(2); //0 negative Diff, 1 positive Diff
 		xDiff = 0; yDiff = 0; zDiff = 0;
+		
+		if(n > 9999) {
+			Bukkit.getScheduler().cancelTask(Play.gameLoopID);
+		}
+		
 		if(random_direction == 0) {
 			if(random_positive == 0) {
 				xDiff = -0.5;
